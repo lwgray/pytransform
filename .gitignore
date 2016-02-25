@@ -1,2 +1,5 @@
 *.pyc
 /venvpy27
+/dist/
+/*.egg-info
+.pypirc

@@ -2,12 +2,8 @@
 
 """pyTransform.stuff: module within the pyTransform package."""
 
-from math import sqrt
 import MDAnalysis
 import numpy as np
-import os
-from MDAnalysis.analysis.rms import rmsd
-import sys
 import csv
 import warnings
 
@@ -25,8 +21,10 @@ class Transformation(object):
         pass 
     
     def transform(self):
-        ref = MDAnalysis.Universe(self.struc1, format='pdb', permissive=False).selectAtoms("segid {0}".format(self.chain1.upper()))
-        mobile = MDAnalysis.Universe(self.struc2, format='pdb', permissive=False).selectAtoms("segid {0}".format(self.chain2.upper()))
+        ref = MDAnalysis.Universe(self.struc1, format='pdb', permissive=False)
+        mobile = MDAnalysis.Universe(self.struc2, format='pdb', permissive=False)
+        ref = ref.selectAtoms("segid {0}".format(self.chain1.upper()))
+        mobile = mobile.selectAtoms("segid {0}".format(self.chain2.upper()))
         tr1 = None
         tr2 = None
         rot = None
@@ -48,6 +46,3 @@ class Transformation(object):
         mobile.atoms.translate(-tr2)
         final = MDAnalysis.Merge(ref, mobile)
         final.atoms.write("{0}_{1}.pdb".format(pdb1, pdb2))
-
-# a = Transformation(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
-# a.transform()
