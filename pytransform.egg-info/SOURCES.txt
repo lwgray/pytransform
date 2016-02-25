@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pytransform/__init__.py
+pytransform/__main__.py
+pytransform/pytransform.py
+pytransform/stuff.py
+pytransform.egg-info/PKG-INFO
+pytransform.egg-info/SOURCES.txt
+pytransform.egg-info/dependency_links.txt
+pytransform.egg-info/entry_points.txt
+pytransform.egg-info/requires.txt
+pytransform.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: pytransform
+Version: 0.1.0
+Summary: Applies transformation to structures and writes new pdb file
+Home-page: https://github.com/lwgray/pyTransform
+Author: Larry Gray
+Author-email: lwgray@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/lwgray/pyEntrezId/tarball/0.1.0
+Description: UNKNOWN
+Keywords: RNA,Molecular Structures,Transformation,3d,Computational Biology
+Platform: UNKNOWN
