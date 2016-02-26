@@ -13,5 +13,5 @@ setup(
     download_url = 'https://github.com/lwgray/pyEntrezId/tarball/0.1.3',
     keywords = ['RNA', 'Molecular Structures', 'Transformation', '3d', 'Computational Biology'],
     classifiers = [],
-    install_requires=['MDAnalysis==0.13.0']
+    dependency_links=['https://github.com/mdanalysis/mdanalysis/tarball/master#egg=0.14.0-dev0']
 )
