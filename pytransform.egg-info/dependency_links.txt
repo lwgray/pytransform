@@ -1,1 +1,1 @@
-
+https://github.com/mdanalysis/mdanalysis/tarball/master#egg=0.14.0-dev0
