@@ -2,7 +2,7 @@ from setuptools import setup
 setup(
     name = 'pytransform',
     packages = ['pytransform'],
-    version = '0.1.0',
+    version = '0.1.1',
     entry_points = {
         "console_scripts": ['pytransform = pytransform.pytransform:main']
         },
@@ -10,7 +10,7 @@ setup(
     author = 'Larry Gray',
     author_email = 'lwgray@gmail.com',
     url = 'https://github.com/lwgray/pyTransform',
-    download_url = 'https://github.com/lwgray/pyEntrezId/tarball/0.1.0',
+    download_url = 'https://github.com/lwgray/pyEntrezId/tarball/0.1.1',
     keywords = ['RNA', 'Molecular Structures', 'Transformation', '3d', 'Computational Biology'],
     classifiers = [],
     install_requires=['numpy==1.10.4', 'MDAnalysis==0.13.0']
