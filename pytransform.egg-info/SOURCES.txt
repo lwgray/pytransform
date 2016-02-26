@@ -10,4 +10,5 @@ pytransform.egg-info/PKG-INFO
 pytransform.egg-info/SOURCES.txt
 pytransform.egg-info/dependency_links.txt
 pytransform.egg-info/entry_points.txt
+pytransform.egg-info/requires.txt
 pytransform.egg-info/top_level.txt
