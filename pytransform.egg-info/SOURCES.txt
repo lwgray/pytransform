@@ -3,9 +3,8 @@ README.rst
 setup.cfg
 setup.py
 pytransform/__init__.py
-pytransform/__main__.py
-pytransform/pytransform.py
-pytransform/stuff.py
+pytransform/transform.py
+pytransform/utils.py
 pytransform.egg-info/PKG-INFO
 pytransform.egg-info/SOURCES.txt
 pytransform.egg-info/dependency_links.txt

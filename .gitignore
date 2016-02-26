@@ -5,3 +5,4 @@
 .pypirc
 *.old
 commands.txt
+/testenv/
