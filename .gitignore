@@ -6,3 +6,6 @@
 *.old
 commands.txt
 /testenv/
+*.pdb
+*.Tf
+*.ent

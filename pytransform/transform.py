@@ -11,6 +11,7 @@ import numpy as np
 import csv
 import warnings
 import os
+from MDAnalysis.coordinates.PDB import PDBWriter
 
 
 warnings.filterwarnings("ignore")
@@ -52,8 +53,8 @@ class Transformation(object):
         ref.atoms.translate(-tr1)
         ref.atoms.rotate(rot)
         mobile.atoms.translate(-tr2)
-        final = MDAnalysis.Merge(ref, mobile)
-        final.atoms.write("{0}_{1}.pdb".format(pdb1, pdb2))
+        ref.atoms.write("{0}_{1}.pdb".format(pdb1, chain1))
+        mobile.atoms.write("{0}_{1}.pdb".format(pdb2,chain2))
 
 
 def main():
