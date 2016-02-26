@@ -20,8 +20,8 @@ class Transformation(object):
     def __init__(self, pdb1, chain1, pdb2, chain2):
         self.pdb1 = pdb1
         self.pdb2 = pdb2
-        self.chain1 = chain1
-        self.chain2 = chain2
+        self.chain1 = chain1.upper()
+        self.chain2 = chain2.upper()
         self.struc1 = "pdb" + pdb1.lower() + ".ent"
         self.struc2 = "pdb" + pdb2.lower() + ".ent"
         pass 
@@ -29,15 +29,17 @@ class Transformation(object):
     def transform(self):
         ref = MDAnalysis.Universe(self.struc1, format='pdb', permissive=False)
         mobile = MDAnalysis.Universe(self.struc2, format='pdb', permissive=False)
-        ref = ref.selectAtoms("segid {0}".format(self.chain1.upper()))
-        mobile = mobile.selectAtoms("segid {0}".format(self.chain2.upper()))
+        ref = ref.selectAtoms("segid {0}".format(self.chain1))
+        mobile = mobile.selectAtoms("segid {0}".format(self.chain2))
         tr1 = None
         tr2 = None
         rot = None
         data = []
         pdb1 = self.pdb1.upper()
         pdb2 = self.pdb2.upper()
-        myfile = "{0}_{1}.Tf".format(pdb1, pdb2)
+        chain1 = self.chain1.upper()
+        chain2 = self.chain2.upper()
+        myfile = "{0}_{1}_{2}_{3}.Tf".format(pdb1, chain1, pdb2, chain2)
         with open(myfile, 'r') as input:
             reader = csv.reader(input, delimiter=",")
             for line in reader:
